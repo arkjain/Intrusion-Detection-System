@@ -272,3 +272,5 @@ test_plan:
 agent_communication:
   - agent: "main"
     message: "Implemented complete IDS system with network traffic simulation, dual detection engines (signature + anomaly), real-time WebSocket communication, and comprehensive dashboard. All core components need backend testing to verify traffic generation, detection algorithms, and API endpoints are working correctly."
+  - agent: "testing"
+    message: "BACKEND TESTING COMPLETED: 5/6 core backend tasks working perfectly. Fixed critical MongoDB ObjectId serialization bug that was preventing background task from running. All APIs functional, traffic simulation generating diverse events, anomaly detection catching port scans, data persistence working. Only issue: WebSocket routing to frontend dev server instead of backend - appears to be infrastructure configuration issue, not code issue."
