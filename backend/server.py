@@ -388,7 +388,9 @@ async def traffic_monitoring_task():
         for alert in alerts:
             alert_dict = alert.dict()
             alert_dict['timestamp'] = alert.timestamp.isoformat()
-            await db.threat_alerts.insert_one(alert_dict)
+            result = await db.threat_alerts.insert_one(alert_dict.copy())
+            # Remove MongoDB _id for broadcasting
+            alert_dict.pop('_id', None)
             
             # Broadcast alert to WebSocket clients
             alert_message = {
