@@ -202,7 +202,7 @@ class IDSBackendTester:
         """Test WebSocket real-time communication"""
         try:
             print("Testing WebSocket connection...")
-            async with websockets.connect(self.ws_url, timeout=10) as websocket:
+            async with websockets.connect(self.ws_url) as websocket:
                 # Send a test message
                 await websocket.send("test_connection")
                 
