@@ -263,15 +263,10 @@ metadata:
   run_ui: false
 
 test_plan:
-  current_focus:
-    - "Network Traffic Simulation Engine"
-    - "Signature-based Detection Engine"
-    - "Anomaly-based Detection Engine"
+  current_focus: []
+  stuck_tasks:
     - "Real-time WebSocket Communication"
-    - "MongoDB Data Models and APIs"
-    - "Background Traffic Monitoring Task"
-  stuck_tasks: []
-  test_all: true
+  test_all: false
   test_priority: "high_first"
 
 agent_communication:
