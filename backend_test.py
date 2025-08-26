@@ -52,8 +52,8 @@ class IDSBackendTester:
         """Test network events generation and retrieval"""
         try:
             # Wait a bit for background task to generate some events
-            print("Waiting 5 seconds for traffic generation...")
-            time.sleep(5)
+            print("Waiting 15 seconds for traffic generation...")
+            time.sleep(15)
             
             response = requests.get(f"{self.base_url}/events?limit=10", timeout=10)
             if response.status_code == 200:
