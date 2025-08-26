@@ -362,7 +362,9 @@ async def traffic_monitoring_task():
         # Store event
         event_dict = event.dict()
         event_dict['timestamp'] = event.timestamp.isoformat()
-        await db.network_events.insert_one(event_dict)
+        result = await db.network_events.insert_one(event_dict.copy())
+        # Remove MongoDB _id for broadcasting
+        event_dict.pop('_id', None)
         
         # Add to recent events for anomaly detection
         recent_events.append(event)
