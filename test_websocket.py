@@ -42,4 +42,5 @@ async def test_websocket():
         return False
 
 if __name__ == "__main__":
-    asyncio.run(test_websocket())
+    result = asyncio.run(test_websocket())
+    print(f"WebSocket test result: {'PASS' if result else 'FAIL'}")
