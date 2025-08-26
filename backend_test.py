@@ -84,8 +84,8 @@ class IDSBackendTester:
         """Test threat alerts detection and retrieval"""
         try:
             # Wait for potential alerts to be generated
-            print("Waiting 10 seconds for threat detection...")
-            time.sleep(10)
+            print("Waiting 20 seconds for threat detection...")
+            time.sleep(20)
             
             response = requests.get(f"{self.base_url}/alerts?limit=20", timeout=10)
             if response.status_code == 200:
